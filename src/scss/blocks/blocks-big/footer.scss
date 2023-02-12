@@ -1,0 +1,16 @@
+@use "../../mixins/responsive.scss" as *;
+
+.footer {
+  background-color: var(--color-bg-secondary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &__left {
+    gap: 2rem;
+  }
+  &__right {
+    gap: 1rem;
+    @include responsive(tablet) {
+      gap: 2rem;
+    }
+  }
+}

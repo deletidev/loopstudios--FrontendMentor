@@ -1,0 +1,18 @@
+@use "../../mixins/responsive.scss" as *;
+
+.creations__item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include responsive(laptop) {
+  .creations__grid {
+    grid-template-areas: "one three" "two two";
+    align-items: center;
+  }
+  .creations__item {
+    margin-left: 0;
+    margin-right: 0;
+    justify-self: flex-end;
+  }
+}

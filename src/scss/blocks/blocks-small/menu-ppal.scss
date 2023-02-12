@@ -1,0 +1,68 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/hover.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.menu {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: -1;
+  left: -100%;
+  top: 0;
+  background-color: var(--color-bg-secondary);
+  height: 100vh;
+  width: 100%;
+  transition: left 0.3s ease-in-out;
+  @include responsive(tablet) {
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+  }
+  &__list {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: all;
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 2rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__item {
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+    color: var(--color-text-white);
+    font-size: var(--fs-lg);
+    font-family: var(--ff-title);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    @include responsive(tablet) {
+      text-transform: none;
+      font-size: var(--fs-base);
+      font-family: var(--ff-main);
+    }
+    @include hover {
+      &:hover {
+        &::before {
+          @include pseudo(40%, 60%) {
+            left: 30%;
+            border-bottom: 2px solid var(--color-text-white);
+          }
+        }
+      }
+    }
+  }
+  &--open {
+    left: 0%;
+  }
+}

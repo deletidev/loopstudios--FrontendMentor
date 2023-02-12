@@ -1,0 +1,29 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/hover.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.menu-footer {
+  &__item {
+    display: block;
+    color: var(--color-text-white);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    position: relative;
+    @include responsive(tablet) {
+      padding: 0;
+    }
+    @include hover {
+      &:hover {
+        &::before {
+          @include pseudo(40%, 130%) {
+            left: 30%;
+            border-bottom: 2px solid var(--color-text-white);
+          }
+        }
+      }
+    }
+  }
+  @include responsive(tablet) {
+    gap: 2rem;
+  }
+}

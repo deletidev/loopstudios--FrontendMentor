@@ -1,0 +1,136 @@
+@use "../../mixins/pseudo.scss" as *;
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/hover.scss" as *;
+
+.gallery {
+  @include responsive(laptop) {
+    grid-area: two;
+  }
+  &__box {
+    @include responsive(tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-rows: repeat(auto-fit, 1fr);
+      grid-auto-flow: dense;
+    }
+    @include responsive(laptop) {
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+      grid-template-rows: repeat(2, minmax(500px, 1fr));
+      grid-auto-flow: dense;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--color-bg-secondary);
+    font-size: var(--fs-lg);
+    padding: 0.7em 1em;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    @include responsive(laptop) {
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+    }
+    &::before {
+      @include pseudo(100%, 100%) {
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.62) 3%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        @include responsive(laptop) {
+          background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.62) 3%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        }
+      }
+    }
+    @include hover {
+      &:hover {
+        &::before {
+          background-image: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.62) 3%,
+            rgba(255, 255, 255, 0.62) 100%
+          );
+        }
+        .gallery__name {
+          color: var(--color-text-title);
+        }
+      }
+    }
+  }
+  &__name {
+    width: 9ch;
+    line-height: 1;
+    padding-top: 1.2em;
+    position: relative;
+    z-index: 1;
+    color: var(--color-text-white);
+    font-size: var(--fs-lg);
+    font-family: var(--ff-title);
+    text-transform: uppercase;
+    @include responsive(movilbig) {
+      padding-top: 2em;
+    }
+  }
+
+  &__earth {
+    background-image: url("../../assets/images/mobile/image-deep-earth.jpg");
+    background-position: top right;
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-deep-earth.jpg");
+    }
+  }
+  &__arcade {
+    background-image: url("../../assets/images/mobile/image-night-arcade.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-night-arcade.jpg");
+    }
+  }
+  &__soccer {
+    background-image: url("../../assets/images/mobile/image-soccer-team.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-soccer-team.jpg");
+    }
+  }
+  &__the {
+    background-image: url("../../assets/images/mobile/image-grid.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-grid.jpg");
+    }
+  }
+  &__from {
+    background-image: url("../../assets/images/mobile/image-from-above.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-from-above.jpg");
+    }
+  }
+  &__borealis {
+    background-image: url("../../assets/images/mobile/image-pocket-borealis.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-pocket-borealis.jpg");
+    }
+  }
+  &__curiosity {
+    background-image: url("../../assets/images/mobile/image-curiosity.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-curiosity.jpg");
+    }
+  }
+  &__fish {
+    background-image: url("../../assets/images/mobile/image-fisheye.jpg");
+    @include responsive(laptop) {
+      background-image: url("../../assets/images/desktop/image-fisheye.jpg");
+    }
+  }
+}

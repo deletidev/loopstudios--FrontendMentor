@@ -1,0 +1,25 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/hover.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.menu-social {
+  padding: 0.3rem 0;
+  justify-content: center;
+  @include responsive(tablet) {
+    justify-content: right;
+  }
+  &__item {
+    display: block;
+    position: relative;
+    @include hover {
+      &:hover {
+        &::before {
+          @include pseudo(100%, 140%) {
+            left: 0;
+            border-bottom: 2px solid var(--color-text-white);
+          }
+        }
+      }
+    }
+  }
+}

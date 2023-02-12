@@ -1,0 +1,23 @@
+/* En esta carpeta puedo tener separadas las variables */
+
+:root {
+  /* Variables CSS */
+
+  --fs-sm: clamp(0.72rem, -0.02vw + 0.73rem, 0.71rem);
+  --fs-base: clamp(0.94rem, 0.22vw + 0.89rem, 1.06rem);
+  --fs-md: clamp(1.22rem, 0.66vw + 1.06rem, 1.59rem);
+  --fs-lg: clamp(1.58rem, 1.43vw + 1.25rem, 2.39rem);
+  --fs-xl: clamp(2.06rem, 2.7vw + 1.43rem, 3.59rem);
+  --fs-xxl: clamp(2.68rem, 4.78vw + 1.56rem, 5.38rem);
+  --fs-xxxl: clamp(3.48rem, 8.11vw + 1.58rem, 8.07rem);
+  --ff-title: "Josefin Sans", sans-serif;
+  --ff-main: "Alata", sans-serif;
+  --color-text-main: hsl(0, 0%, 55%);
+  --color-text-title: hsl(0, 0%, 0%);
+  --color-text-white: hsl(0, 0%, 100%);
+  --color-bg-primary: hsl(0, 0%, 100%);
+  --color-bg-secondary: hsl(0, 0%, 0%);
+}
+
+/* Variables SASS */
+$color-red: red;

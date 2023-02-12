@@ -1,0 +1,26 @@
+@use "../mixins/responsive.scss" as *;
+
+.title {
+  font-family: var(--ff-title);
+  text-transform: uppercase;
+  color: var(--color-text-title);
+}
+.title-l {
+  font-size: var(--fs-lg);
+}
+.title-xl {
+  font-size: var(--fs-xl);
+}
+.title-xxl {
+  font-size: var(--fs-xxl);
+  word-break: break-word;
+  @include minimovil {
+    font-size: var(--fs-lg);
+  }
+  @include responsive(tablet) {
+    line-height: 0.95;
+  }
+}
+.title-white {
+  color: var(--color-text-white);
+}
