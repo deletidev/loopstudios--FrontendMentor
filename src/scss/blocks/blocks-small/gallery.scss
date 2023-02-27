@@ -1,6 +1,6 @@
-@use "../../mixins/pseudo.scss" as *;
-@use "../../mixins/responsive.scss" as *;
-@use "../../mixins/hover.scss" as *;
+@use '../../mixins/pseudo.scss' as *;
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/hover.scss' as *;
 
 .gallery {
   @include responsive(laptop) {
@@ -85,52 +85,52 @@
   }
 
   &__earth {
-    background-image: url("../../assets/images/mobile/image-deep-earth.jpg");
+    background-image: url('/assets/images/mobile/image-deep-earth.jpg');
     background-position: top right;
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-deep-earth.jpg");
+      background-image: url('/assets/images/desktop/image-deep-earth.jpg');
     }
   }
   &__arcade {
-    background-image: url("../../assets/images/mobile/image-night-arcade.jpg");
+    background-image: url('/assets/images/mobile/image-night-arcade.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-night-arcade.jpg");
+      background-image: url('/assets/images/desktop/image-night-arcade.jpg');
     }
   }
   &__soccer {
-    background-image: url("../../assets/images/mobile/image-soccer-team.jpg");
+    background-image: url('/assets/images/mobile/image-soccer-team.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-soccer-team.jpg");
+      background-image: url('/assets/images/desktop/image-soccer-team.jpg');
     }
   }
   &__the {
-    background-image: url("../../assets/images/mobile/image-grid.jpg");
+    background-image: url('/assets/images/mobile/image-grid.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-grid.jpg");
+      background-image: url('/assets/images/desktop/image-grid.jpg');
     }
   }
   &__from {
-    background-image: url("../../assets/images/mobile/image-from-above.jpg");
+    background-image: url('/assets/images/mobile/image-from-above.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-from-above.jpg");
+      background-image: url('/assets/images/desktop/image-from-above.jpg');
     }
   }
   &__borealis {
-    background-image: url("../../assets/images/mobile/image-pocket-borealis.jpg");
+    background-image: url('/assets/images/mobile/image-pocket-borealis.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-pocket-borealis.jpg");
+      background-image: url('/assets/images/desktop/image-pocket-borealis.jpg');
     }
   }
   &__curiosity {
-    background-image: url("../../assets/images/mobile/image-curiosity.jpg");
+    background-image: url('/assets/images/mobile/image-curiosity.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-curiosity.jpg");
+      background-image: url('/assets/images/desktop/image-curiosity.jpg');
     }
   }
   &__fish {
-    background-image: url("../../assets/images/mobile/image-fisheye.jpg");
+    background-image: url('/assets/images/mobile/image-fisheye.jpg');
     @include responsive(laptop) {
-      background-image: url("../../assets/images/desktop/image-fisheye.jpg");
+      background-image: url('/assets/images/desktop/image-fisheye.jpg');
     }
   }
 }
