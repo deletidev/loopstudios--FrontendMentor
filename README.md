@@ -1,4 +1,4 @@
-# Password-generator
+# Loopstidios--FrontendMentor
 
 ![Imagen del proyecto](src/assets/design/loopstudio.jpg)
 
