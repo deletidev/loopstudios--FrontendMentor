@@ -1,4 +1,4 @@
-# Password-generator
+# Loopstidios--FrontendMentor
 
 ![Imagen del proyecto](src/assets/design/loopstudio.jpg)
 
@@ -12,7 +12,7 @@ Sitio web estático responsive, basado en el diseño proporcionado por Frontend 
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Con este proyacto he aprendido a usar Sass y Vites para
+Con este proyacto he aprendido a usar Sass y Vite para
 compilar.
 
 ## Tecnologías 🛠
