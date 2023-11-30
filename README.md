@@ -12,8 +12,7 @@ Sitio web estático responsive, basado en el diseño proporcionado por Frontend 
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Con este proyacto he aprendido a usar Sass y Vite para
-compilar.
+Con este proyecto he aprendido a usar una nueva forma de organizar mi código con Sass y ha usar Vite para compilar.
 
 ## Tecnologías 🛠
 
